@@ -1,6 +1,6 @@
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
-from datetime import datetime
+from datetime import datetime, timedelta  # Import timedelta
 
 # Define the default arguments for the DAG
 default_args = {
@@ -10,7 +10,7 @@ default_args = {
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
-    'retry_delay': timedelta(minutes=5),
+    'retry_delay': timedelta(minutes=5),  # Use timedelta here
 }
 
 # Define the DAG object

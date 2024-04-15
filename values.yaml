@@ -1,0 +1,6 @@
+dags:
+  gitSync:
+    enabled: true
+    repo: https://github.com/paolofrancisco/airflow.git
+    branch: main
+    subPath: "dags"
